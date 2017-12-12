@@ -78,88 +78,118 @@
                     <p>With Transfer Booking, you can easily book any ticket you need to safely reach a local airport thanks to our detailed system of searching and booking transfer tickets.</p>
                     <a href="">Read more</a>
             </article>
-                <form id="one-way" >
-                    <p></p>
+                <form id="one-way">
                     <header>
                        <h6>One-way</h6>
                     </header>
+                    <p>Fill in the details below to book your transfer</p>
                     <div class="form-left-side">
-                        <label for="from-location"></label>
+                        <label for="from-location">From airport, hotel or location</label>
                         <select id="from-location">
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option default>New Delhi (DEL)</option>
+                            <option>Demo Item 1-1</option>
+                            <option>Demo Item 1-2</option>
                         </select>
-                        <input type="checkbox" name="add-nearby-airport-from">
                         <label>
-                        <input type="date" name="date">
+                            <input type="checkbox" name="add-nearby-airport-from" id="add-nearby-airport-from">
+                            Add Nearby Airports
                         </label>
-                        <label for="transfer-options"></label>
+                        <label>
+                            Date
+                            <input type="date" name="date">
+                        </label>
+                        <label for="transfer-options">Transfer Options</label>
                         <select id="transfer-options">
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option default>Private Transfer</option>
+                            <option>Demo Item 1-1</option>
+                            <option>Demo Item 1-2</option>
                         </select>
-                        <input type="checkbox" name="find-by-address">
+                        <label>
+                            <input type="checkbox" name="find-by-address">
+                            Find by address on map
+                        </label>
                     </div>
                    
                     <div class="form-right-side">
-                        <label for="to-location"></label>
+                        <label for="to-location">
+                            To location, hotel or airport
+                        </label>
                         <select id="to-location">
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option default>Private Transfer</option>
+                            <option>Demo Item 1-1</option>
+                            <option>Demo Item 1-2</option>
                         </select>
-                        <input type="checkbox" name="add-nearby-airport-to">
                         <label>
-                        <input type="time" name="time">
+                            Add Nearby Airports 
+                            <input type="checkbox" name="add-nearby-airport-to">
                         </label>
                         <label>
-                        <input type="number" name="adults">
+                            Time
+                            <input type="time" name="time">
                         </label>
                         <label>
-                        <input type="number" name="children">
+                            Adults (16+)
+                            <input type="number" name="adults" step="1" min="0" value="0">
                         </label>
-                        <button id="book-now"></button>
+                        <label>
+                            Children
+                            <input type="number" name="children" step="1" min="0" value="0">
+                        </label>
+                        <button id="book-now">
+                            Book now
+                        </button>
                     </div>
                 </form>
 
                 <form id="return">
-                    <input type="radio" name="trip-purpose">
-                    <input type="radio" name="trip-purpose">
-
+                    <header>
+                        <h6>Return</h6>
+                    </header>
+                    <label>
+                        <input type="radio" name="trip-purpose">
+                        Work
+                    </label>
+                    <label>
+                        <input type="radio" name="trip-purpose">
+                        Vacation
+                    </label>
                     <div class="form-left-side">
-                    <label for="destination"></label>
+                    <label for="destination">Destination</label>
                     <select id="destination">
-                        <option></option>
-                        <option></option>
-                        <option></option>
+                        <option >New York (JFK)</option>
+                        <option>Demo Item 1-1</option>
+                        <option>Demo Item 1-2</option>
                     </select>
                     <label>
-                    <input type="date" name="arrival">
+                        Arrival
+                        <input type="date" name="arrival">
                     </label>
                     <label>
-                    <input type="number" name="adults">
+                        Adults (16+)
+                        <input type="number" name="adults" step="1" min="0" value="0">
                     </label>
-                    <label for="star-rating"></label>
+                    <label for="star-rating">Star rating</label>
                     <select id="star-rating">
-                        <option></option>
-                        <option></option>
-                        <option></option>
+                        <option default>5</option>
+                        <option>4</option>
+                        <option>3</option>
+                        <option>2</option>
+                        <option>1</option>
                     </select>
                     </div>
 
                     <div class="form-right-side">
-                        <label>
-                        <input type="number" name="rooms">
+                        <label>Rooms
+                        <input type="number" name="rooms" step="1" min="0" value="0">
                         </label>
-                        <label>
+                        <label>Departure
                         <input type="date" name="depurture">
                         </label>
-                        <label>
-                        <input type="number" name="children">
-                        </label>
-                        <button id="search-hotel"></button>
+                    <label>
+                        Children
+                        <input type="number" name="children" step="1" min="0" value="0">
+                    </label>
+                    <button id="search-hotel">Search hotel</button>
                     </div>
                 </form>
         </section>
