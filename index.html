@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <script src="https://use.fontawesome.com/dbe1310672.js"></script>
+        <link rel="stylesheet" href="css/main.css">
         <title>Transfer booking</title>
     </head>
     <body>
@@ -18,7 +19,7 @@
                 <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i><a href=""></a>
                 <a href=""><i class="fa fa-wifi" aria-hidden="true"></i><a href=""></a>
             </section>
-            <header>
+            <header id="nav">
                 <div class="logo">
                     <img src="image/logo.png" alt="Transfer Booking Logo">
                 </div>
@@ -71,129 +72,135 @@
                     <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
                 </div>
             </header>
-            <article>
-                <header>
-                    <h1>Enjoy the Freedom</h1>
-                </header>
-                    <p>With Transfer Booking, you can easily book any ticket you need to safely reach a local airport thanks to our detailed system of searching and booking transfer tickets.</p>
-                    <a href="">Read more</a>
-            </article>
-                <form id="one-way">
+
+            <section id="quick-booking">
+                <article>
                     <header>
-                       <h6>One-way</h6>
+                        <h1>Enjoy the Freedom</h1>
                     </header>
-                    <p>Fill in the details below to book your transfer</p>
-                    <div class="form-left-side">
-                        <label for="from-location">From airport, hotel or location</label>
-                        <select id="from-location">
-                            <option default>New Delhi (DEL)</option>
+                        <p>With Transfer Booking, you can easily book any ticket you need to safely reach a local airport thanks to our detailed system of searching and booking transfer tickets.</p>
+                        <a href="">Read more</a>
+                </article>
+                <div>
+                    <form id="one-way">
+                        <header>
+                        <h6>One-way</h6>
+                        </header>
+                        <p>Fill in the details below to book your transfer</p>
+                        <div class="form-left-side">
+                            <label for="from-location">From airport, hotel or location</label>
+                            <select id="from-location">
+                                <option default>New Delhi (DEL)</option>
+                                <option>Demo Item 1-1</option>
+                                <option>Demo Item 1-2</option>
+                            </select>
+                            <label>
+                                <input type="checkbox" name="add-nearby-airport-from" id="add-nearby-airport-from">
+                                Add Nearby Airports
+                            </label>
+                            <label>
+                                Date
+                                <input type="date" name="date">
+                            </label>
+                            <label for="transfer-options">Transfer Options</label>
+                            <select id="transfer-options">
+                                <option default>Private Transfer</option>
+                                <option>Demo Item 1-1</option>
+                                <option>Demo Item 1-2</option>
+                            </select>
+                            <label>
+                                <input type="checkbox" name="find-by-address">
+                                Find by address on map
+                            </label>
+                        </div>
+                    
+                        <div class="form-right-side">
+                            <label for="to-location">
+                                To location, hotel or airport
+                            </label>
+                            <select id="to-location">
+                                <option default>Private Transfer</option>
+                                <option>Demo Item 1-1</option>
+                                <option>Demo Item 1-2</option>
+                            </select>
+                            <label>
+                                Add Nearby Airports 
+                                <input type="checkbox" name="add-nearby-airport-to">
+                            </label>
+                            <label>
+                                Time
+                                <input type="time" name="time">
+                            </label>
+                            <label>
+                                Adults (16+)
+                                <input type="number" name="adults" step="1" min="0" value="0">
+                            </label>
+                            <label>
+                                Children
+                                <input type="number" name="children" step="1" min="0" value="0">
+                            </label>
+                            <button id="book-now">
+                                Book now
+                            </button>
+                        </div>
+                    </form>
+
+                    <form id="return">
+                        <header>
+                            <h6>Return</h6>
+                        </header>
+                        <label>
+                            <input type="radio" name="trip-purpose">
+                            Work
+                        </label>
+                        <label>
+                            <input type="radio" name="trip-purpose">
+                            Vacation
+                        </label>
+                        <div class="form-left-side">
+                        <label for="destination">Destination</label>
+                        <select id="destination">
+                            <option >New York (JFK)</option>
                             <option>Demo Item 1-1</option>
                             <option>Demo Item 1-2</option>
                         </select>
                         <label>
-                            <input type="checkbox" name="add-nearby-airport-from" id="add-nearby-airport-from">
-                            Add Nearby Airports
-                        </label>
-                        <label>
-                            Date
-                            <input type="date" name="date">
-                        </label>
-                        <label for="transfer-options">Transfer Options</label>
-                        <select id="transfer-options">
-                            <option default>Private Transfer</option>
-                            <option>Demo Item 1-1</option>
-                            <option>Demo Item 1-2</option>
-                        </select>
-                        <label>
-                            <input type="checkbox" name="find-by-address">
-                            Find by address on map
-                        </label>
-                    </div>
-                   
-                    <div class="form-right-side">
-                        <label for="to-location">
-                            To location, hotel or airport
-                        </label>
-                        <select id="to-location">
-                            <option default>Private Transfer</option>
-                            <option>Demo Item 1-1</option>
-                            <option>Demo Item 1-2</option>
-                        </select>
-                        <label>
-                            Add Nearby Airports 
-                            <input type="checkbox" name="add-nearby-airport-to">
-                        </label>
-                        <label>
-                            Time
-                            <input type="time" name="time">
+                            Arrival
+                            <input type="date" name="arrival">
                         </label>
                         <label>
                             Adults (16+)
                             <input type="number" name="adults" step="1" min="0" value="0">
                         </label>
+                        <label for="star-rating">Star rating</label>
+                        <select id="star-rating">
+                            <option default>5</option>
+                            <option>4</option>
+                            <option>3</option>
+                            <option>2</option>
+                            <option>1</option>
+                        </select>
+                        </div>
+
+                        <div class="form-right-side">
+                            <label>Rooms
+                            <input type="number" name="rooms" step="1" min="0" value="0">
+                            </label>
+                            <label>Departure
+                            <input type="date" name="depurture">
+                            </label>
                         <label>
                             Children
                             <input type="number" name="children" step="1" min="0" value="0">
                         </label>
-                        <button id="book-now">
-                            Book now
-                        </button>
-                    </div>
-                </form>
-
-                <form id="return">
-                    <header>
-                        <h6>Return</h6>
-                    </header>
-                    <label>
-                        <input type="radio" name="trip-purpose">
-                        Work
-                    </label>
-                    <label>
-                        <input type="radio" name="trip-purpose">
-                        Vacation
-                    </label>
-                    <div class="form-left-side">
-                    <label for="destination">Destination</label>
-                    <select id="destination">
-                        <option >New York (JFK)</option>
-                        <option>Demo Item 1-1</option>
-                        <option>Demo Item 1-2</option>
-                    </select>
-                    <label>
-                        Arrival
-                        <input type="date" name="arrival">
-                    </label>
-                    <label>
-                        Adults (16+)
-                        <input type="number" name="adults" step="1" min="0" value="0">
-                    </label>
-                    <label for="star-rating">Star rating</label>
-                    <select id="star-rating">
-                        <option default>5</option>
-                        <option>4</option>
-                        <option>3</option>
-                        <option>2</option>
-                        <option>1</option>
-                    </select>
-                    </div>
-
-                    <div class="form-right-side">
-                        <label>Rooms
-                        <input type="number" name="rooms" step="1" min="0" value="0">
-                        </label>
-                        <label>Departure
-                        <input type="date" name="depurture">
-                        </label>
-                    <label>
-                        Children
-                        <input type="number" name="children" step="1" min="0" value="0">
-                    </label>
-                    <button id="search-hotel">Search hotel</button>
-                    </div>
-                </form>
+                        <button id="search-hotel">Search hotel</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </section>
 
+        <main>
         <section id="advantages">
             <article>
                 <div>
@@ -241,7 +248,6 @@
             </article>
         </section>
 
-        <main>
         <section id="transfer-options">
             <header>
                 <h1>Your Transfer Options</h1>
