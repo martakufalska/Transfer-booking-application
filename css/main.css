@@ -1,54 +1,166 @@
+@import 'fonts.css';
 * {
     box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    width: 100px;
+}
+html{
+    font-size: 10px;
 }
 body {
     display: grid;
-    /* grid-template-rows: 19rem 3.2rem 19rem 6rem 25rem 3.5rem 4rem; */
-    grid-template-rows: 907px ; 
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+.fa {
+    margin: 0 0.7rem;
+}
+.page-align {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 92%;
+    min-width: 116rem;
 }
 
 #first-info{
+    background: no-repeat url(../image/background.png) center / cover;
+    box-shadow: 100vw 0 0 rgba(139,69,19, 0.5) inset;
     grid-row: 1;
+    overflow: hidden;
+    color: #fff;
+}
+
+#first-info a {
+    color: #fff;
+} 
+
+#contacts {
+    height: 4rem;
+    font-size: 1.07rem;
+    font-family: "Lato";
+}
+
+.contact-items-align {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    height: 7.7rem;
+    background-color: #fff;
+}
+
+.logo {
+    width: 18.4rem;
+    height: 3.72rem;
+    margin-left: 4rem;
+}
+
+#site-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#site-navigation li {
+    float: left;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+div>i{
+    margin-right: 4rem;
+}
+
+#site-navigation li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+#search-field {
+    display: none;
+}
+
+#quick-booking {
+    display: flex;
+    height: 53rem;
+}
+#quick-booking h1 {
+    font-size: 4.8rem;
+    font-family: "Lato-bold", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+}
+
+#quick-booking p {
+    font-size: 1.26rem;
+    margin-bottom: 3rem;
+}
+
+.button {
+    text-transform: uppercase;
+    font-family: "Lato-bold", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.08rem;
+}
+
+.transparent-btn {
+    border: 0.1rem solid;
+    border-color: #fff;
+    padding: 0.8rem 2.4rem;
 }
 
 #advantages{
-    height: 310px;
+    height: 31rem;
     grid-row: 2;
 }
 
 #transfer-options{
-    height: 910px;
+    height: 91rem;
     grid-row: 3;
 }
 
 #support{
-    height: 543px;
+    height: 55rem;
     grid-row: 4;
 }
 
 #blog-posts{
-    height: 1164px;
+    height: 116rem;
     grid-row: 5;
 }
 
 #airway-companies{
-    height: 467px;
+    height: 47rem;
     grid-row: 6;
 }
 
 footer{
-    height: 573px;
+    height: 57rem;
     grid-row: 7;
 }
 
-#contacts {
-    height: 60px;
-}
 
-#nav {
-    height: 110px;
-}
-
-#quick-booking{
-    height: 737px;
-}
+  
